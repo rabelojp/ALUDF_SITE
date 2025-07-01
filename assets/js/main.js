@@ -1,10 +1,12 @@
-/**
-* Template Name: FlexStart
-* Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
-* Updated: Nov 01 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".portfolio-details-slider").forEach(slider => {
+    const configEl = slider.querySelector(".swiper-config");
+    if (configEl) {
+      const config = JSON.parse(configEl.textContent);
+      new Swiper(slider, config);
+    }
+  });
+});
 
 (function() {
   "use strict";
